@@ -57,16 +57,12 @@ function generateBookCards(book) {
   read.appendChild(readLabel(book, book.readStatus));
   card.appendChild(read);
   //this needs to be done in an easier way
-  read.dataset.indexNumber = myLibrary.findIndex(
-    (findBook) => findBook === book
-  );
+  read.dataset.indexNumber = myLibrary.indexOf(book);
 
   const remove = document.createElement("td");
   remove.classList.add("remove");
   //  same as above, this needs to be done in an easier way
-  remove.dataset.indexNumber = myLibrary.findIndex(
-    (findBook) => findBook === book
-  );
+  remove.dataset.indexNumber = myLibrary.indexOf(book);
   //change this later
   remove.textContent = "X";
   card.appendChild(remove);
