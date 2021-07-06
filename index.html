@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My First Calculator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mystyle.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="header"></div>
+      <table id="books">
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th class="readheader" >Read</th>
+          <th class="remove">Delete</th>
+        </tr>
+      </table>
+      <div>
+        <button class="btn openForm" onclick="openForm()">
+          Add New Book »
+        </button>
+        <div class="form-popup" id="myForm">
+          <form
+            id="myActualForm"
+            onsubmit="return addBook();"
+            class="form-container"
+          >
+            <h2>Add New Book</h2>
+
+            <label for="title"><b>Title</b></label>
+            <input class="inputs" type="text" name="title" required />
+
+            <label for="author"><b>Author</b></label>
+            <input class="inputs" type="text" name="author" required />
+
+            <button type="submit" class="btn btn1">Add Book</button>
+
+            <button type="submit" class="btn btn1 cancel" onclick="closeForm()">
+              Close
+            </button>
+
+            <!-- <button type="button" class="btn cancel" onclick="closeForm()">
+              Close
+            </button> -->
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
